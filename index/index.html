@@ -7,7 +7,7 @@
     <title>Document</title> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>LIFF Starter</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
 </head>
 <body>
 
@@ -26,13 +26,14 @@
     <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
     <script>
         async function main(){
-            await liff.init({liffId: 1656245031-Y41Ab4oV})
-        }
-        if(liff.liff.isLoggedIn()){
+            await liff.init({liffId: "1656245031-Y41Ab4oV"});
+        
+        if(liff.isLoggedIn()){
             getUserProfile()
         }else{
             liff.login()
         }
+    }
         main()
         
         async function getUserProfile(){
