@@ -44,10 +44,18 @@
         document.getElementById("statusMessage").append = profile.statusMessage;
       }
 
-      function logOut() {
-        liff.logOut();
+    //   function logOut() {
+    //     liff.logOut();
+    //     window.location.reload();
+    //   }
+
+      // logout call only when external browse
+    document.getElementById('liffLogoutButton').addEventListener('click', function() {
+    if (liff.isLoggedIn()) {
+        liff.logout();
         window.location.reload();
-      }
+    }
+});
       
     </script>
   </body>
