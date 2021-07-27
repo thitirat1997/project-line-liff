@@ -10,6 +10,8 @@
     <!-- <link rel="stylesheet" href="style.css"> -->
 </head>
 <body>
+
+    <h1> page B</h1>
     <img id ="pictureUrl" >
     <p id ="displaName"> 
         <b> Dispaly Name :  </b>
@@ -29,7 +31,8 @@
         if(liff.isLoggedIn()){
             getUserProfile()
         }else{
-            liff.login();
+            liff.login({ redirectUri: "https://thitirat1997.github.io/project-line-liff/index.html"});
+            // liff.login();
         }
     }
         main()
