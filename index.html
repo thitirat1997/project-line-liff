@@ -29,15 +29,15 @@
             await liff.init({liffId: "1656245031-Y41Ab4oV"});
         
         if(liff.isLoggedIn()){
-            displayLiffData()
+            getUserProfile()
         }else{
-            liff.login({ redirectUri: "https://thitirat1997.github.io/project-line-liff/index"});
+            liff.login();
         }
     }
         main()
         
-        async function displayLiffData(){
-            const profile = await liff.displayLiffData()
+        async function getUserProfile(){
+            const profile = await liff.getUserProfile()
             document.getElementById('pictureUrl').src = profile.pictureUrl
             document.getElementById('displaName').append = profile.displayName
             document.getElementById('statusMessage').append = profile.statusMessage
